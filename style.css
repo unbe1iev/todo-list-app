@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+.app {
+    width: 60%;
+    height: auto;
+    background-color: #ececec;
+    margin: 100px auto;
+    padding: 25px;
+    border: 1px dashed #444444;
+    border-radius: 25px;
+}
+
+input:not([type="radio"]):not([type="checkbox"]), button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: initial;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.bubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #494949;
+    box-shadow: #bebebe;
+}
+
+.bubble::after {
+    content: "";
+    display: block;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    background-color: #494949;
+    box-shadow: #bebebe;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+}
+
+input:checked ~ .bubble::after {
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+}
+
+.addTodo input[type="submit"] {
+    display: block;
+    width: 100%;
+    font-size: 1.125rem;
+    padding: 1rem 1.5rem;
+    color: white;
+    background-color: #b7b7b7;
+    border-radius: 0.5rem;
+    box-shadow: #151515;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.addTodo input[type="submit"]:hover {
+    opacity: 0.75;
+}
+
+.todoList .list {
+    margin: 1rem 0;
+}
+
+/*.todoList .todoItem {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    background-color: white;*/
+/*    padding: 1rem;*/
+/*    border-radius: 0.5rem;*/
+/*    box-shadow: #151515;*/
+/*    margin-bottom: 1rem;*/
+/*}*/
+
+/*.todoItem label {*/
+/*    display: block;*/
+/*    margin-right: 1rem;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*.todoItem .todoContent {*/
+/*    flex: 1 1 0%;*/
+/*}*/
+
+/*.todoItem .todoContent input {*/
+/*    color: #151515;*/
+/*    font-size: 1.125rem;*/
+/*}*/
+
+/*.todoItem .actions {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.todoItem .actions button {*/
+/*    display: block;*/
+/*    padding: 0.5rem;*/
+/*    border-radius: 0.25rem;*/
+/*    color: white;*/
+/*    cursor: pointer;*/
+/*    transition: 0.2s ease-in-out;*/
+/*}*/
+
+.todoActions .edit {
+    margin-right: 0.5rem;
+    background-color: #252424;
+}
+
+.todoActions .delete {
+    margin-right: 0.5rem;
+    background-color: #656262;
+}
+
+.todoItem.done .todoContent input {
+    text-decoration: line-through;
+    color: #444444;
+}
+
+body {
+    background: #f1f1f1;
+    color: #252424;
+}
+
+section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+}
+
+h1 {
+    color: #252424;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+h2 {
+    color: #252424;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.searchForTodo {
+    margin: 0 auto;
+    width: 75%;
+    /*background-color: #ffffff;*/
+    /*border: 1px solid green;*/
+}
+
+.todoList {
+    margin: 0 auto;
+    width: 75%;
+    /*background-color: #ffffff;*/
+    /*border: 1px solid green;*/
+}
+
+.addTodo {
+    margin: 0 auto;
+    width: 75%;
+    /*background-color: #ffffff;*/
+    /*border: 1px solid green;*/
+}
+
+.addTodo input[type="text"] {
+    font-size: 1.2rem;
+    color: #252424;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: #101010;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+}
+
+table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+}
+
+table th, table td {
+    padding: .625em;
+    text-align: center;
+    border: 1px solid black;
+}
+
+table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+    table {
+        border: 0;
+    }
+
+    table caption {
+        font-size: 1.3em;
+    }
+
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+
+    table td::before {
+        /*
+        * aria-label has no advantage, it won't be read inside a table
+        content: attr(aria-label);
+        */
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Todo List</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <main class="app">
+            <h1>Todo App</h1>
+
+            <section class="searchForTodo">
+                <h2>Search for todo</h2>
+            </section>
+
+            <section class="todoList">
+                <h2>Todo List</h2>
+                    <table class="list" id="todoList">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Content</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr class="todoItem done">
+                                <td class="label">
+                                    <input type="checkbox">
+                                    <span class="bubble"></span>
+                                </td>
+
+                                <td class="todoContent">
+                                    <input type="text" value="Tidy a room" readonly>
+                                </td>
+
+                                <td class="todoDate">
+                                    <input type="date" value="2022-11-01" readonly>
+                                </td>
+
+                                <td class="todoActions">
+                                    <button class="edit">Edit</button>
+                                    <button class="delete">Delete</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <div class="todoItem">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="bubble"></span>
+                                    </label>
+
+                                    <div class="todoContent">
+                                        <input type="text" value="Get onions" readonly>
+                                    </div>
+
+                                    <div class="actions">
+                                        <button class="edit">Edit</button>
+                                        <button class="delete">Delete</button>
+                                    </div>
+                                </div>
+                            </tr>
+                        </tbody>
+                    </table>
+            </section>
+
+            <section class="addTodo">
+                <h2>Add a todo</h2>
+                <form id="newTodoForm">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td><input type="text" name="newTodoContent" id="newTodoContent" placeholder="e.g. Make a dinner"></td>
+                            <td><input type="date" name="newTodoDate" id="newTodoDate"></td>
+                            <td><input type="submit" name="newTodoSubmit" id="newTodoSubmit" value="Add"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </section>
+        </main>
+
+        <script src="main.js"></script>
+    </body>
+</html>
