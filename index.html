@@ -14,6 +14,22 @@
 
             <section class="searchForTodo">
                 <h2>Search for todo</h2>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Content</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><input type="text" name="searchTodoContent" id="searchTodoContent" placeholder="e.g. Make a dinner"></td>
+                        <td><input type="date" name="searchTodoDate" id="searchTodoDate"></td>
+                        <td><button class="searchTodoButton">Search</button></td>
+                    </tr>
+                    </tbody>
+                </table>
             </section>
 
             <section class="todoList">
@@ -21,64 +37,55 @@
                     <table class="list" id="todoList">
                         <thead>
                             <tr>
-                                <th scope="col"></th>
-                                <th scope="col">Content</th>
-                                <th scope="col">Date</th>
-                                <th scope="col">Actions</th>
+                                <th></th>
+                                <th>Content</th>
+                                <th>Date</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
 
                         <tbody>
-                            <tr class="todoItem done">
-                                <td class="label">
-                                    <input type="checkbox">
-                                    <span class="bubble"></span>
-                                </td>
+<!--                            <tr class="todoItem done">-->
+<!--                                <td class="todoLabel">-->
+<!--                                    <label>-->
+<!--                                        <input type="checkbox">-->
+<!--                                        <span class="bubble"></span>-->
+<!--                                    </label>-->
+<!--                                </td>-->
 
-                                <td class="todoContent">
-                                    <input type="text" value="Tidy a room" readonly>
-                                </td>
+<!--                                <td class="todoContent">-->
+<!--                                    <input type="text" value="Tidy a room" readonly>-->
+<!--                                </td>-->
 
-                                <td class="todoDate">
-                                    <input type="date" value="2022-11-01" readonly>
-                                </td>
+<!--                                <td class="todoDate">-->
+<!--                                    <input type="date" value="2022-11-01" readonly>-->
+<!--                                </td>-->
 
-                                <td class="todoActions">
-                                    <button class="edit">Edit</button>
-                                    <button class="delete">Delete</button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <div class="todoItem">
-                                    <label>
-                                        <input type="checkbox">
-                                        <span class="bubble"></span>
-                                    </label>
-
-                                    <div class="todoContent">
-                                        <input type="text" value="Get onions" readonly>
-                                    </div>
-
-                                    <div class="actions">
-                                        <button class="edit">Edit</button>
-                                        <button class="delete">Delete</button>
-                                    </div>
-                                </div>
-                            </tr>
+<!--                                <td class="todoActions">-->
+<!--                                    <button class="editButton">Edit</button>-->
+<!--                                    <button class="deleteButton">Delete</button>-->
+<!--                                </td>-->
+<!--                            </tr>-->
                         </tbody>
                     </table>
             </section>
 
             <section class="addTodo">
                 <h2>Add a todo</h2>
-                <form id="newTodoForm">
+                <form id="addTodoForm">
                     <table>
+                        <thead>
+                            <tr>
+                                <th>Content</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
                         <tbody>
                         <tr>
-                            <td><input type="text" name="newTodoContent" id="newTodoContent" placeholder="e.g. Make a dinner"></td>
-                            <td><input type="date" name="newTodoDate" id="newTodoDate"></td>
-                            <td><input type="submit" name="newTodoSubmit" id="newTodoSubmit" value="Add"></td>
+                            <td><input type="text" name="addTodoContent" id="addTodoContent" placeholder="e.g. Make a dinner"></td>
+                            <td><input type="date" name="addTodoDate" id="newTodoDate"></td>
+                            <td><input type="submit" value="Add"></td>
                         </tr>
                         </tbody>
                     </table>
