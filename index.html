@@ -14,22 +14,27 @@
 
             <section class="searchForTodo">
                 <h2>Search for todo</h2>
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Content</th>
-                        <th>Date</th>
-                        <th>Actions</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td><input type="text" name="searchTodoContent" id="searchTodoContent" placeholder="e.g. Make a dinner"></td>
-                        <td><input type="date" name="searchTodoDate" id="searchTodoDate"></td>
-                        <td><button class="searchTodoButton">Search</button></td>
-                    </tr>
-                    </tbody>
-                </table>
+                <form id="searchTodoForm">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Content</th>
+                            <th>Date</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><input type="text" name="searchTodoContent" id="searchTodoContent" placeholder="e.g. Make a dinner"></td>
+                            <td>
+                                <input type="date" name="searchTodoDate1" id="searchTodoDate1">
+                                <input type="date" name="searchTodoDate2" id="searchTodoDate2">
+                            </td>
+                            <td><input class="searchSubmit" type="submit" value="Search"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
             </section>
 
             <section class="todoList">
@@ -63,9 +68,9 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td><input type="text" name="addTodoContent" id="addTodoContent" placeholder="e.g. Make a dinner"></td>
+                            <td><input type="text" name="addTodoContent" id="addTodoContent" placeholder="e.g. Make a dinner" minlength="3" maxlength="255"></td>
                             <td><input type="date" name="addTodoDate" id="newTodoDate"></td>
-                            <td><input type="submit" value="Add"></td>
+                            <td><input type="submit" class="addSubmit" value="Add"></td>
                         </tr>
                         </tbody>
                     </table>

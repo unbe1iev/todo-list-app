@@ -169,11 +169,6 @@ button:hover {
     filter: brightness(0.92);
 }
 
-.searchTodoButton {
-    background-color: #a19f9f;
-    border: 1px solid #3b3b3b;
-}
-
 .editButton {
     background-color: #4d65e5;
     border: 1px solid #001238;
@@ -196,8 +191,16 @@ input[type="submit"] {
     font-size: 12px;
     font-weight: 500;
     cursor: pointer;
+}
+
+.addSubmit {
     background-color: #419314;
     border: 1px solid #063800;
+}
+
+.searchSubmit {
+    background-color: #a19f9f;
+    border: 1px solid #3b3b3b;
 }
 
 .todoItem.done .todoContent input {
